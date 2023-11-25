@@ -1,0 +1,147 @@
+/* .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+} */
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.head .head-logo {
+  flex: 0.2;
+  color: black;
+  font-size: 20px;
+}
+
+.head .head-nav {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.head .head-nav a {
+  font-size: 16px;
+  color: black;
+}
+
+.head .head-nav a.active {
+  color: var(--color);
+}
+
+.head .head-nav a:hover {
+  color: var(--color);
+}
+
+.head .head-nav-close {
+  display: none;
+}
+
+.head .head-cart {
+  flex: 0.1;
+  display: flex;
+}
+
+.head .head-cart i {
+  font-size: 18px;
+  color: var(--color);
+  font-weight: 700;
+}
+
+.head .head-cart span {
+  color: #333;
+  font-weight: 700;
+  font-size: 12px;
+  align-self: flex-start;
+}
+
+.head .head-menu-icon i {
+  display: none;
+  color: var(--color);
+  font-weight: 700;
+}
+
+@media all and (width <= 768px) {
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .head .head-logo {
+    font-size: 16px;
+  }
+
+  .head .head-nav {
+    display: none;
+  }
+
+  .head .head-nav-close {
+    display: block;
+    font-size: 22px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--color);
+  }
+
+  #head-nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    padding-top: 50px;
+    box-shadow: var(--box-shadow);
+    border-right: 0.5px solid #333;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1;
+  }
+
+  .head .head-cart {
+    display: flex;
+    /* gap: 20px; */
+    align-self: center;
+  }
+
+  .head .head-cart i {
+    margin-left: 0;
+  }
+
+  .head .head-menu-icon i {
+    display: flex;
+    font-size: 32px;
+
+    position: absolute;
+    top: 28px;
+    right: 20px;
+  }
+}
+
+@media all and (width <= 600px) {
+  #head-nav-menu {
+    width: 200px;
+  }
+}
+
+@media all and (width <= 480px) {
+  #head-nav-menu a {
+    font-size: 12px;
+  }
+}
